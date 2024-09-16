@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      /* Basic reset for styling */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Styles for the card container */
+      li {
+        list-style-type: none;
+        display: inline-block;
+        width: 300px;
+        margin: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      li:hover {
+        transform: translateY(-10px);
+      }
+
+      /* Link styling */
+      li a {
+        text-decoration: none;
+        color: #333;
+        display: block;
+      }
+
+      /* Image styling with static width and height */
+      li .img {
+        width: 300px;
+        height: 200px;
+        object-fit: cover; /* Ensures the image fills the box while maintaining aspect ratio */
+        display: block;
+      }
+
+      /* Text styling */
+      li a span {
+        display: block;
+        padding: 15px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+        text-align: center;
+      }
+
+
+      button{
+        padding: 10px 15px;
+        margin: 10px;
+      }
+      /* Media query for responsive layout */
+      @media (max-width: 768px) {
+        li {
+          width: 100%;
+          margin: 10px 0;
+        }
+        li .img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    </style>
+    <ul style="display: flex; flex-wrap: wrap" class="list"></ul>
+
+    <button class="btn">load more</button>
+  </body>
+  <script type="module" src="main.js"></script>
+</html>
