@@ -2,6 +2,10 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 
 const getData = async () => {
+
+
+  try{
+
   const id = urlParams.get("id");
 
 
@@ -30,6 +34,14 @@ const getData = async () => {
   `
 
   console.log(json);
+
+}catch(e){
+  // alert("Data tapilmadi")
+
+  window.location.href = "error.html";
+
+}
+
 };
 
 getData();
